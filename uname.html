@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Uname Command</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f7fc;
+        }
+        header {
+            background: linear-gradient(135deg, #0078d7, #00aaff);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .back-home-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #004080;
+            color: #fff;
+            padding: 8px 15px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-home-btn:hover {
+            background-color: #ffd700;
+        }
+        .command {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+        .command h2 {
+            margin-top: 0;
+            color: #0078d7;
+        }
+        .command h3 {
+            color: #333;
+        }
+        .command pre {
+            background: #f4f4f4;
+            border-left: 3px solid #0078d7;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        .screenshot {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .screenshot img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+            background: #004080;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="webpage.html" class="back-home-btn">&larr; Back to Home</a>
+        <h1>Linux Uname Command</h1>
+    </header>
+
+    <div class="command">
+        <h2>4. <code>uname</code></h2>
+        <h3>Description</h3>
+        <p>The <code>uname</code> command in Linux is used to display system information such as the kernel version, the operating system, and the machine's architecture. It's a useful command for obtaining basic system details at a glance.</p>
+        
+        <h3>Purpose and Usage</h3>
+        <p>The <code>uname</code> command provides vital information about the system, which can be helpful for troubleshooting or when you need to know more about your environment. It can be used to display specific details about the system or a broader overview.</p>
+        <p><strong>Syntax:</strong></p>
+        <pre>uname [options]</pre>
+        
+        <h3>Examples</h3>
+        <p>To display the kernel name:</p>
+        <pre>uname -s</pre>
+        <p>To display all available system information:</p>
+        <pre>uname -a</pre>
+        <p>Output might include:</p>
+        <pre>Linux myhostname 5.4.0-42-generic #46-Ubuntu SMP Tue Sep 8 14:29:59 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux</pre>
+        
+        <h3>Screenshot</h3>
+        <div class="screenshot">
+        
+            <img src="uname.png">
+        </div>
+        
+        <h3>Additional Explanation</h3>
+        <p>The <code>uname</code> command can be used with various options to display specific details:</p>
+        <ul>
+            <li><code>-s</code>: Kernel name</li>
+            <li><code>-r</code>: Kernel version</li>
+            <li><code>-v</code>: Kernel release</li>
+            <li><code>-a</code>: All available system information (including kernel, machine hardware, and operating system)</li>
+        </ul>
+        <p>For example, using <code>uname -r</code> will show the kernel version, which can be helpful for identifying compatibility issues or when troubleshooting software or hardware problems.</p>
+    </div>
+
+    <footer>
+        &copy; 2025 Linux Commands Guide
+    </footer>
+</body>
+</html>

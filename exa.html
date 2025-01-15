@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Homepage</title>
+    <style>
+        /* Shake Animation */
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            50% { transform: translateX(10px); }
+            75% { transform: translateX(-10px); }
+            100% { transform: translateX(0); }
+        }
+
+        /* General body and background styling */
+        body {
+            background: url('homescreen.jpg') no-repeat center center;
+            background-size: cover;
+            margin: 0;
+            height: 100vh; /* Ensure full height */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            color: white;
+            animation: shake 0.5s ease-in-out 1; /* Apply shake effect */
+        }
+
+        /* Header styling */
+        header {
+            background-color: rgba(0, 0, 139, 0.8); /* Dark Blue with opacity */
+            width: 100%;
+            padding: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header h3 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Navigation styling */
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            padding: 15px 0;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: #fff;
+            font-size: 1.2em;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #f39c12;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        /* Main image styling */
+        img {
+            margin-top: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Title styling */
+        h1 {
+            color: white;
+            font-size: 3.5em;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Footer styling */
+        footer {
+            color: #fff;
+            font-size: 1.2em;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.1em;
+        }
+
+        footer a:hover {
+            color: #f39c12;
+        }
+
+        /* Modal Containers */
+        .terms-container, .privacy-container {
+            display: none;
+            position: fixed;
+            top: 10%;
+            left: 10%;
+            right: 10%;
+            bottom: 10%;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        .terms-container h1, .privacy-container h1 {
+            color: #0056b3;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .terms-container p, .privacy-container p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #333;
+            text-align: justify;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #f39c12;
+        }
+
+        .close {
+            display: block;
+            background-color: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100px;
+            margin: 20px auto;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+
+        .close:hover {
+            background-color: #e67e22;
+        }
+
+        /* Background overlay */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3>Help and Information</h3>
+    </header>
+
+    <nav>
+        <a href="file:///C:/Users/INTEL/Desktop/Krishnaveni%20r%20nair/apropos.html" target="_blank">Apropos</a>
+        <a href="file:///C:/Users/INTEL/Desktop/Krishnaveni%20r%20nair/info.html" target="_blank">Info</a>
+        <a href="file:///C:/Users/INTEL/Desktop/Krishnaveni%20r%20nair/alias.html" target="_blank">Alias</a>
+        <a href="file:///C:/Users/INTEL/Desktop/Krishnaveni%20r%20nair/uname.html" target="_blank">Uname</a>
+        <a href="file:///C:/Users/INTEL/Desktop/Krishnaveni%20r%20nair/df.html" target="_blank">DF</a>
+        <a href="file:///C:/Users/INTEL/Desktop/Krishnaveni%20r%20nair/du.html" target="_blank">DU</a>
+        <a href="file:///C:/Users/INTEL/Desktop/Krishnaveni%20r%20nair/mount.html" target="_blank">Mount</a>
+        <a href="file:///C:/Users/INTEL/Desktop/Krishnaveni%20r%20nair/ln.html" target="_blank">LN</a>
+        <a href="file:///C:/Users/INTEL/Desktop/Krishnaveni%20r%20nair/man.html" target="_blank">Man</a>
+    </nav>
+
+    <img src="penguin.gif" width="400" height="300" alt="Penguin">
+    <h1>LINUX COMMAND WORLD</h1>
+
+    <footer>
+        <p>
+            <a href="javascript:void(0);" onclick="showTermsOfUse()">Terms of Use</a> | 
+            <a href="javascript:void(0);" onclick="showPrivacyPolicy()">Privacy Policy</a>
+        </p>
+        <p>&copy; 2025 Learning Linux Command</p>
+    </footer>
+
+    <!-- Terms of Use Modal -->
+    <div id="terms-of-use" class="terms-container">
+        <h1>Terms of Use</h1>
+        <p>
+            By using this website, you agree to follow all terms outlined herein. Any violation may result in termination of your access to the site. We reserve the right to modify the terms at any time, and such changes will be communicated through updated versions on this page. Please review the terms regularly.
+        </p>
+        <div class="close" onclick="closeTermsOfUse()">Close</div>
+    </div>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacy-policy" class="privacy-container">
+        <h1>Privacy Policy</h1>
+        <p>
+            We respect your privacy and are committed to safeguarding any personal information you share with us. This website does not collect any personal data unless provided by you through forms or interactions. We may use cookies to improve your browsing experience, but these do not store any personally identifiable information. We are not responsible for the privacy practices of third-party websites linked to from this page. By using this website, you agree to the terms outlined in this policy.
+        </p>
+        <div class="close" onclick="closePrivacyPolicy()">Close</div>
+    </div>
+
+    <div id="overlay" class="overlay"></div>
+
+    <script>
+        function showTermsOfUse() {
+            document.getElementById('terms-of-use').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeTermsOfUse() {
+            document.getElementById('terms-of-use').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        function showPrivacyPolicy() {
+            document.getElementById('privacy-policy').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closePrivacyPolicy() {
+            document.getElementById('privacy-policy').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux DU Command</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f7fc;
+        }
+        header {
+            background: linear-gradient(135deg, #0078d7, #00aaff);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .back-home-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #004080;
+            color: #fff;
+            padding: 8px 15px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-home-btn:hover {
+            background-color: #ffd700;
+        }
+        .command {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+        .command h2 {
+            margin-top: 0;
+            color: #0078d7;
+        }
+        .command h3 {
+            color: #333;
+        }
+        .command pre {
+            background: #f4f4f4;
+            border-left: 3px solid #0078d7;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        .screenshot {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .screenshot img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+            background: #004080;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="webpage.html" class="back-home-btn">&larr; Back to Home</a>
+        <h1>Linux DU Command</h1>
+    </header>
+
+    <div class="command">
+        <h2>6. <code>du</code></h2>
+        <h3>Description</h3>
+        <p>The <code>du</code> command in Linux is used to estimate and display the disk space used by files and directories. It's a useful tool for understanding disk usage on your system, especially when trying to identify large files or directories.</p>
+        
+        <h3>Purpose and Usage</h3>
+        <p>The <code>du</code> command provides a way to check the size of files and directories on your system, either for a specific directory or for the entire file system. This command helps you manage disk space by identifying which files or directories are consuming the most storage.</p>
+        <p><strong>Syntax:</strong></p>
+        <pre>du [options] [directory]</pre>
+        
+        <h3>Examples</h3>
+        <p>To display the disk usage of the current directory:</p>
+        <pre>du</pre>
+        <p>To display the disk usage of the current directory in a human-readable format (e.g., KB, MB):</p>
+        <pre>du -h</pre>
+        <p>Output might include:</p>
+        <pre>4.0K    ./dir1
+2.3M    ./dir2
+1.5G    ./dir3</pre>
+        
+        <h3>Screenshot</h3>
+        <div class="screenshot">
+            <img src="du.png">
+        </div>
+        
+        <h3>Additional Explanation</h3>
+        <p>The <code>du</code> command can be used with several options to customize the output. Some useful options include:</p>
+        <ul>
+            <li><code>-h</code>: Human-readable output (e.g., KB, MB, GB)</li>
+            <li><code>-s</code>: Display only the total size for the specified directory</li>
+            <li><code>-a</code>: Display the disk usage for all files, not just directories</li>
+            <li><code>-c</code>: Show a grand total at the end of the output</li>
+        </ul>
+        <p>The <code>du</code> command is particularly useful for monitoring and managing disk usage, especially in environments with limited storage. You can combine it with other commands like <code>grep</code> to find specific files or directories that are using large amounts of space.</p>
+    </div>
+
+    <footer>
+        &copy; 2025 Linux Commands Guide
+    </footer>
+</body>
+</html>

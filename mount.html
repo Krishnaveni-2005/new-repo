@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Mount Command</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f7fc;
+        }
+        header {
+            background: linear-gradient(135deg, #0078d7, #00aaff);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .back-home-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #004080;
+            color: #fff;
+            padding: 8px 15px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-home-btn:hover {
+            background-color: #ffd700;
+        }
+        .command {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+        .command h2 {
+            margin-top: 0;
+            color: #0078d7;
+        }
+        .command h3 {
+            color: #333;
+        }
+        .command pre {
+            background: #f4f4f4;
+            border-left: 3px solid #0078d7;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        .screenshot {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .screenshot img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+            background: #004080;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="webpage.html" class="back-home-btn">&larr; Back to Home</a>
+        <h1>Linux Mount Command</h1>
+    </header>
+
+    <div class="command">
+        <h2>7. <code>mount</code></h2>
+        <h3>Description</h3>
+        <p>The <code>mount</code> command in Linux is used to attach file systems to the directory tree, making them accessible. It is often used for mounting storage devices such as hard drives, USB drives, or network shares to specific directories.</p>
+        
+        <h3>Purpose and Usage</h3>
+        <p>The <code>mount</code> command enables you to access data from devices such as USB drives, network storage, and other partitions. It connects the storage device to the file system so that it can be accessed like any other directory or file on your system.</p>
+        <p><strong>Syntax:</strong></p>
+        <pre>mount [options] [device] [mount_point]</pre>
+        
+        <h3>Examples</h3>
+        <p>To mount a USB drive (e.g., <code>/dev/sdb1</code>) to a directory (e.g., <code>/mnt/usb</code>):</p>
+        <pre>sudo mount /dev/sdb1 /mnt/usb</pre>
+        <p>To mount a network file system (e.g., <code>//server/share</code>):</p>
+        <pre>sudo mount -t cifs //server/share /mnt/network</pre>
+        
+        <h3>Screenshot</h3>
+        <div class="screenshot">
+            <img src="mount.png">
+        </div>
+        
+        <h3>Additional Explanation</h3>
+        <p>The <code>mount</code> command is critical for accessing different types of storage on a Linux system. Some common options include:</p>
+        <ul>
+            <li><code>-t</code>: Specify the file system type (e.g., <code>ext4</code>, <code>ntfs</code>, <code>vfat</code>)</li>
+            <li><code>-o</code>: Pass specific options, such as <code>rw</code> (read-write) or <code>ro</code> (read-only)</li>
+            <li><code>loop</code>: Use this for mounting disk image files (e.g., ISO files)</li>
+        </ul>
+        <p>Unmounting is equally important. Once you are done with the device, you should unmount it to ensure that all data is written to the device properly. You can unmount using the <code>umount</code> command:</p>
+        <pre>sudo umount /mnt/usb</pre>
+        <p>The <code>mount</code> command is essential for working with external devices, network shares, and various types of file systems in Linux.</p>
+    </div>
+
+    <footer>
+        &copy; 2025 Linux Commands Guide
+    </footer>
+</body>
+</html>

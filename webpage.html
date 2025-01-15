@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Homepage</title>
+    <style>
+        /* Shake Animation */
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            50% { transform: translateX(10px); }
+            75% { transform: translateX(-10px); }
+            100% { transform: translateX(0); }
+        }
+
+        /* General body and background styling */
+        body {
+            background: url('homescreen.jpg') no-repeat center center;
+            background-size: cover;
+            margin: 0;
+            height: 100vh; /* Ensure full height */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            color: white;
+            animation: shake 0.5s ease-in-out 1; /* Apply shake effect */
+        }
+
+        /* Header styling */
+        header {
+            background-color: rgba(0, 0, 139, 0.8); /* Dark Blue with opacity */
+            width: 100%;
+            padding: 15px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        header h3 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Navigation styling */
+        nav {
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            padding: 15px 0;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: #fff;
+            font-size: 1.2em;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #f39c12;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        /* Main image styling */
+        img {
+            margin-top: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Title styling */
+        h1 {
+            color: white;
+            font-size: 3.5em;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Footer styling */
+        footer {
+            color: #fff;
+            font-size: 1.2em;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.1em;
+        }
+
+        footer a:hover {
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h3>Help and Information</h3>
+    </header>
+
+    <nav>
+        <a href="apropos.html" target="_blank">Apropos</a>
+        <a href="info.html" target="_blank">Info</a>
+        <a href="alias.html" target="_blank">Alias</a>
+        <a href="uname.html" target="_blank">Uname</a>
+        <a href="df.html" target="_blank">DF</a>
+        <a href="du.html" target="_blank">DU</a>
+        <a href="mount.html" target="_blank">Mount</a>
+        <a href="ln.html" target="_blank">LN</a>
+        <a href="man.html" target="_blank">Man</a>
+    </nav>
+
+    <img src="penguin.gif" width="400" height="300" alt="Penguin">
+    <h1>LINUX COMMAND WORLD</h1>
+
+    <footer>
+        <p>
+            <a href="terms of use.html">Terms of Use</a>
+         
+        </p>
+        <p>&copy; 2025 Learning Linux Command</p>
+    </footer>
+</body>
+</html>

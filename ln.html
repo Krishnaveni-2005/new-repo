@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux LN Command</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f7fc;
+        }
+        header {
+            background: linear-gradient(135deg, #0078d7, #00aaff);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .back-home-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #004080;
+            color: #fff;
+            padding: 8px 15px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .back-home-btn:hover {
+            background-color: #ffd700;
+        }
+        .command {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+        .command h2 {
+            margin-top: 0;
+            color: #0078d7;
+        }
+        .command h3 {
+            color: #333;
+        }
+        .command pre {
+            background: #f4f4f4;
+            border-left: 3px solid #0078d7;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        .screenshot {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .screenshot img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+            background: #004080;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="webpage.html" class="back-home-btn">&larr; Back to Home</a>
+        <h1>Linux LN Command</h1>
+    </header>
+
+    <div class="command">
+        <h2>8. <code>ln</code></h2>
+        <h3>Description</h3>
+        <p>The <code>ln</code> command in Linux is used to create hard and symbolic (soft) links to files or directories. Links allow files and directories to be referenced from multiple locations in the file system, without duplicating the actual data.</p>
+        
+        <h3>Purpose and Usage</h3>
+        <p>The <code>ln</code> command is used to create links, which are references to files. There are two types of links:</p>
+        <ul>
+            <li><strong>Hard Link:</strong> A direct reference to the file's inode. It points to the data on disk directly, and deleting the original file does not remove the data as long as another hard link exists.</li>
+            <li><strong>Symbolic Link (Symlink):</strong> A pointer to another file or directory, similar to a shortcut in Windows. If the original file is deleted, the symlink becomes broken.</li>
+        </ul>
+        <p><strong>Syntax:</strong></p>
+        <pre>ln [options] [target] [link_name]</pre>
+        
+        <h3>Examples</h3>
+        <p>To create a hard link to a file:</p>
+        <pre>ln file.txt hardlink.txt</pre>
+        <p>To create a symbolic link to a file:</p>
+        <pre>ln -s file.txt symlink.txt</pre>
+        
+        <h3>Screenshot</h3>
+        <div class="screenshot">
+            <img src="ln.png">
+        </div>
+        
+        <h3>Additional Explanation</h3>
+        <p>The <code>ln</code> command is useful for referencing files from multiple locations without duplicating the file's data. Some commonly used options with the <code>ln</code> command include:</p>
+        <ul>
+            <li><code>-s</code>: Create a symbolic link instead of a hard link.</li>
+            <li><code>-f</code>: Force the creation of the link, even if the link name already exists.</li>
+            <li><code>-v</code>: Show details about the link creation process.</li>
+        </ul>
+        <p>Symbolic links are often used to create shortcuts or references to files and directories across different locations on a system. Hard links, on the other hand, provide a more direct, system-level reference to the data itself, making them useful for file management at a lower level.</p>
+    </div>
+
+    <footer>
+        &copy; 2025 Linux Commands Guide
+    </footer>
+</body>
+</html>
